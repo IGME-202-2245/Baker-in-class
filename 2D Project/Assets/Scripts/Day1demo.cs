@@ -10,6 +10,8 @@ public class Day1demo : MonoBehaviour
 
     public GameObject camera;
 
+    int randNum = 23423;
+
     // Start is called before the first frame update
     void Start()
     {

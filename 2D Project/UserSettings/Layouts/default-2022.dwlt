@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357.3334
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 69
+  controlID: 118
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -392,7 +392,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f0510000
     m_LastClickedID: 20976
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000086610000886100008a610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -420,21 +420,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000000e4100004e4100002ea70000
+    m_ExpandedIDs: ffffffff0000000086610000886100008a610000ba610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Day1demo
-      m_OriginalName: Day1demo
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 42818
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -513,9 +513,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 24a70000
-      m_LastClickedID: 42788
-      m_ExpandedIDs: fad1feff1cd3feff
+      m_SelectedIDs: 42f8ffff
+      m_LastClickedID: -1982
+      m_ExpandedIDs: 16fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -908,9 +908,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 10}
+    m_Target: {x: -0.09833215, y: 0.88499, z: 10}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 10}
+    m_Value: {x: -0.09833215, y: 0.88499, z: 10}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -980,7 +980,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.28380737, y: 0.47981784, z: -0.16747081, w: -0.8131342}
+  m_LastSceneViewRotation: {x: -0.30925283, y: 0.6079121, z: -0.27792606, w: -0.67643404}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 1
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 02000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
