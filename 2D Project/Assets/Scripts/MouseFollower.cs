@@ -7,19 +7,17 @@ public class MouseFollower : MonoBehaviour
 {
     public Vector3 mousePos;
 
+    [SerializeField]
+    bool usePolling = false;
+
     // Update is called once per frame
     void Update()
     {
-        //  Get mouse pos in screen space
-        mousePos = Input.mousePosition;
-
-
-        //  Convert to world space
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-        //  Don't move this GameObject on the Z axis
-        mousePos.z = transform.position.z;
-
+        if (usePolling)
+        {
+            //  Get mouse pos in screen space
+            mousePos = ConvertMousePosToWorldPos(Input.mousePosition);
+        }
 
         //  Move this GameObject to the mouse
         transform.position = mousePos;
@@ -27,6 +25,25 @@ public class MouseFollower : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        //mousePos = context.ReadValue<Vector2>();
+        if (!usePolling)
+        {
+            Vector2 tempPos = context.ReadValue<Vector2>();
+
+            if (tempPos != Vector2.zero)
+            {
+                mousePos = ConvertMousePosToWorldPos(tempPos);
+
+                Debug.Log(mousePos);
+            }
+        }
+    }
+
+    Vector3 ConvertMousePosToWorldPos(Vector3 pos)
+    {
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos);
+
+        worldPos.z = transform.position.z;
+
+        return worldPos;
     }
 }
