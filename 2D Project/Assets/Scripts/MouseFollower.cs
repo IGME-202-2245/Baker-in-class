@@ -33,7 +33,7 @@ public class MouseFollower : MonoBehaviour
             {
                 mousePos = ConvertMousePosToWorldPos(tempPos);
 
-                Debug.Log(mousePos);
+                //Debug.Log(mousePos);
             }
         }
     }
