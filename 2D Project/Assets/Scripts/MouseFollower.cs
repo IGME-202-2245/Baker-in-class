@@ -10,6 +10,12 @@ public class MouseFollower : MonoBehaviour
     [SerializeField]
     bool usePolling = false;
 
+    public Rigidbody2D rBody;
+
+    public Vector3 forceVect;
+
+    public float maxForce;
+
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +26,11 @@ public class MouseFollower : MonoBehaviour
         }
 
         //  Move this GameObject to the mouse
-        transform.position = mousePos;
+        //transform.position = mousePos;
+
+        forceVect = mousePos - transform.position;
+
+        rBody.AddForce(forceVect.normalized * maxForce);
     }
 
     public void OnMove(InputAction.CallbackContext context)
