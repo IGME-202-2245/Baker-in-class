@@ -5,14 +5,14 @@ using UnityEngine.InputSystem;
 
 public class MouseFollower : MonoBehaviour
 {
-    public Vector3 mousePos;
+    Vector3 mousePos;
 
     [SerializeField]
     bool usePolling = false;
 
     public Rigidbody2D rBody;
 
-    public Vector3 forceVect;
+    Vector3 forceVect;
 
     public float maxForce;
 
@@ -55,5 +55,16 @@ public class MouseFollower : MonoBehaviour
         worldPos.z = transform.position.z;
 
         return worldPos;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.gray;
+
+        Gizmos.DrawWireSphere(mousePos, 1f);
+
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawRay(mousePos, forceVect);
     }
 }

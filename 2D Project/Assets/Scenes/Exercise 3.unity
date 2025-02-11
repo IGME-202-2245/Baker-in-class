@@ -246,10 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b734abaf451839c4790b949bb48d0ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mousePos: {x: 0, y: 0, z: 0}
   usePolling: 0
   rBody: {fileID: 1397644121}
-  forceVect: {x: 0, y: 0, z: 0}
   maxForce: 5
 --- !u!212 &1397644119
 SpriteRenderer:
@@ -352,7 +350,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397644117}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
