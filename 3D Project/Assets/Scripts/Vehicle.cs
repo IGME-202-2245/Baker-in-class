@@ -27,6 +27,10 @@ public class Vehicle : MonoBehaviour
     // Fields for Quaternions
     Quaternion turning;
 
+    public Vector3 rayOrigin, rayDirection;
+    public LayerMask terrainLayer;
+    public RaycastHit terrainHit;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +45,9 @@ public class Vehicle : MonoBehaviour
 
         // Fields for Quaternions
         velocity = transform.forward * currentSpeed;*/
+
+        //  Check for ray hit
+        Physics.Raycast(rayOrigin, rayDirection, out terrainHit, 1000f, terrainLayer);
 
         //  Calc current turning
         turning = Quaternion.Euler(0f, movementDirection.x * turnSpeed * Time.fixedDeltaTime, 0f);
@@ -86,10 +93,16 @@ public class Vehicle : MonoBehaviour
         Vector3 delta = velocity * Time.fixedDeltaTime;
 
 
+        Vector3 myPos = transform.position;
+
+        if (terrainHit.point != null && terrainHit.point != Vector3.zero)
+        {
+            myPos = terrainHit.point;
+        }
 
 
         // Move the Vehicle
-        rBody.Move(transform.position + delta, nextRotation);
+        rBody.Move(myPos + delta, nextRotation);
     }
 
 

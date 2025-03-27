@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 1405085554}
   - component: {fileID: 1405085553}
   - component: {fileID: 1405085556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainData: {fileID: 15600000, guid: f4007728caa39614f9ea84aa1ab9fccf, type: 2}
+  perlicStep: 0.018
 --- !u!1 &1514679895
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,12 +524,24 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1711654041129780843, guid: 58e31db52e995544eb62e633c9d401f1, type: 3}
+      propertyPath: rayOrigin.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711654041129780843, guid: 58e31db52e995544eb62e633c9d401f1, type: 3}
+      propertyPath: rayDirection.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711654041129780843, guid: 58e31db52e995544eb62e633c9d401f1, type: 3}
       propertyPath: accelerationRate
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1711654041129780843, guid: 58e31db52e995544eb62e633c9d401f1, type: 3}
       propertyPath: decelerationRate
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711654041129780843, guid: 58e31db52e995544eb62e633c9d401f1, type: 3}
+      propertyPath: terrainLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
