@@ -95,7 +95,7 @@ public class Vehicle : MonoBehaviour
 
         Vector3 myPos = transform.position;
 
-        if (terrainHit.point != null && terrainHit.point != Vector3.zero)
+        if (terrainHit.transform != null)
         {
             myPos = terrainHit.point;
         }
