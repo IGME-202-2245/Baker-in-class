@@ -25,6 +25,9 @@ public abstract class Agent : MonoBehaviour
         // Add Steering force to Acceleration
         acceleration += steeringForce;
 
+        //  Limit Acceleration force
+        acceleration = Vector3.ClampMagnitude(acceleration, maxForce);
+
         // Update Velocity with current Acceleration
         velocity += acceleration * Time.deltaTime;
 
@@ -56,6 +59,26 @@ public abstract class Agent : MonoBehaviour
         //   which returns the seeking steering force
         //  and then return that returned vector. 
         return Seek(target.transform.position);
+    }
+
+    public Vector3 Flee(Vector3 targetPos)
+    {
+        // Calculate desired velocity
+        Vector3 desiredVelocity = transform.position - targetPos;
+
+        // Set desired = max speed
+        desiredVelocity = desiredVelocity.normalized * maxSpeed;
+
+        // Calculate flee steering force
+        Vector3 fleeingForce = desiredVelocity - velocity;
+
+        // Return flee steering force
+        return fleeingForce;
+    }
+
+    public Vector3 CalcFuturePosition(float time)
+    {
+        return transform.position + (velocity * time);
     }
 
 }

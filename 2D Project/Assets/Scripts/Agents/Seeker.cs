@@ -6,8 +6,15 @@ public class Seeker : Agent
 {
     public GameObject target;
 
+    [SerializeField]
+    float seekWeight = 10f;
+
     protected override Vector3 CalcSteering()
     {
-        return Seek(target);
+        Vector3 totalForce = Vector3.zero;
+
+        totalForce += Seek(target) * seekWeight;
+
+        return totalForce;
     }
 }
